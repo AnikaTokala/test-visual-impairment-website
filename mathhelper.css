@@ -2,18 +2,13 @@ body {
     margin: 0;
     background-color: #1d1d4a;
     font-family: "Times New Roman", serif;
-    display: flex;
-    justify-content: center;  /* horizontal center */
-    align-items: center;      /* vertical center */
-    min-height: 100vh;        /* full height of the page */
-    flex-direction: column;   /* stack tables vertically */
 }
 
+/* Header */
 header {
     background-color: #fbf3ea;
     text-align: center;
     padding: 30px 0;
-    width: 100%;
 }
 
 h1 {
@@ -22,18 +17,22 @@ h1 {
     color: #1d1d4a;
 }
 
+/* Main content area */
 main {
     display: flex;
-    flex-direction: column;   /* stack tables vertically */
-    align-items: center;      /* center tables horizontally */
-    gap: 50px;                /* space between tables */
+    flex-direction: column;  /* stack tables vertically */
+    align-items: center;     /* center horizontally */
+    justify-content: center; /* center vertically within main */
+    min-height: calc(100vh - 120px); /* full viewport minus header height */
+    gap: 50px;               /* space between tables */
     width: 100%;
 }
 
 /* Table styling */
 table {
     border-collapse: collapse;
-    width: 80%;               /* make tables wider */
+    width: 90%;       /* make tables wider */
+    max-width: 1200px; /* cap so they don’t get too huge on very wide screens */
     color: #fbf3ea;
     text-align: center;
 }
@@ -41,8 +40,8 @@ table {
 /* Table cells */
 th, td {
     border: 1px solid #fbf3ea;
-    padding: 30px 40px;       /* more vertical and horizontal space */
-    font-size: 20px;          /* bigger text so it feels less small */
+    padding: 40px 50px;   /* very tall rows, more breathing room */
+    font-size: 22px;      /* bigger text */
 }
 
 /* Header cells */
@@ -50,6 +49,7 @@ th {
     background-color: #2a2a6b;
 }
 
+/* Symbol styling */
 .symbol {
-    font-size: 28px;
+    font-size: 32px;  /* bigger symbols */
 }
