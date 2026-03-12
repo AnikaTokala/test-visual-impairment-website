@@ -27,21 +27,21 @@ main {
     width: 100%;
 }
 
-/* Table styling only */
+/* Tables */
 table {
     border-collapse: collapse;
-    width: 60%;           /* smaller table width */
-    max-width: 800px;     /* cap width */
+    width: 50%;           /* smaller width */
+    max-width: 600px;     /* cap width */
     color: #fbf3ea;
     text-align: center;
-    margin: 0 auto;       /* center horizontally */
+    margin: 40px auto 0 auto; /* 40px margin from header, auto horizontal */
 }
 
 /* Table cells */
 th, td {
     border: 1px solid #fbf3ea;
-    padding: 10px 15px;   /* compact row height and horizontal padding */
-    font-size: 18px;      /* smaller text */
+    padding: 6px 10px;    /* much smaller row height and horizontal padding */
+    font-size: 16px;      /* smaller text */
 }
 
 /* Header cells */
@@ -49,7 +49,7 @@ th {
     background-color: #2a2a6b;
 }
 
-/* Symbol styling */
+/* Symbols */
 .symbol {
-    font-size: 22px;      /* smaller symbols */
+    font-size: 18px;      /* smaller symbols */
 }
