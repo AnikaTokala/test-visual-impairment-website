@@ -27,8 +27,7 @@ main {
 
 /* Table */
 
-table {
-    display: block;     
+table {    
     margin: 20px auto;    
     border-collapse: collapse;
     width: 50%;
