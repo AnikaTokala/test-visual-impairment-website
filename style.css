@@ -23,6 +23,8 @@ h1{
     display:flex;
     justify-content:center;
     gap:80px;
+    max-width:900px;
+    margin:0 auto;
 }
 
 /* each column */
