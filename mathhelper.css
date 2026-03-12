@@ -22,17 +22,16 @@ main {
     display: flex;
     flex-direction: column;  /* stack tables vertically */
     align-items: center;     /* center horizontally */
-    justify-content: center; /* center vertically within main */
-    min-height: calc(100vh - 120px); /* full viewport minus header height */
-    gap: 50px;               /* space between tables */
+    gap: 40px;               /* space between tables */
+    padding: 40px 0;         /* spacing from header and bottom */
     width: 100%;
 }
 
 /* Table styling */
 table {
     border-collapse: collapse;
-    width: 90%;       /* make tables wider */
-    max-width: 1200px; /* cap so they don’t get too huge on very wide screens */
+    width: 70%;               /* moderate width */
+    max-width: 1000px;        /* cap width */
     color: #fbf3ea;
     text-align: center;
 }
@@ -40,8 +39,8 @@ table {
 /* Table cells */
 th, td {
     border: 1px solid #fbf3ea;
-    padding: 40px 50px;   /* very tall rows, more breathing room */
-    font-size: 22px;      /* bigger text */
+    padding: 20px 30px;       /* moderate row height */
+    font-size: 20px;          /* readable text size */
 }
 
 /* Header cells */
@@ -51,5 +50,5 @@ th {
 
 /* Symbol styling */
 .symbol {
-    font-size: 32px;  /* bigger symbols */
+    font-size: 28px;          /* nice size for symbols */
 }
