@@ -20,28 +20,32 @@ h1 {
 /* Main content area */
 main {
     display: flex;
-    flex-direction: column;  /* stack tables vertically */
-    align-items: center;     /* center horizontally */
-    gap: 40px;               /* space between tables */
-    padding: 40px 0;         /* spacing from header and bottom */
-    width: 100%;
+    flex-direction: column; /* stack tables vertically */
+    gap: 40px;              /* space between tables */
+    padding: 40px 0;        /* spacing from header */
 }
 
+/* Wrapper around each table to allow width to work */
+.table-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center table horizontally */
+}
+
+/* Tables */
 table {
     border-collapse: collapse;
-    width: 50%;           /* half the page width */
-    max-width: 600px;     /* optional cap */
+    width: 50%;          /* now this actually works */
+    max-width: 600px;    /* optional cap */
     color: #fbf3ea;
     text-align: center;
-    margin: 20px auto;    /* centered horizontally with space from header */
 }
 
 /* Table cells */
 th, td {
     border: 1px solid #fbf3ea;
-    padding: 6px 10px;    /* short rows, not tall */
-    width: 50%;  
-    font-size: 24px;      /* bigger text */
+    padding: 6px 12px;   /* short rows */
+    font-size: 22px;     /* bigger text */
 }
 
 /* Header cells */
@@ -51,5 +55,5 @@ th {
 
 /* Symbols */
 .symbol {
-    font-size: 24px;      /* bigger symbols */
+    font-size: 26px;     /* bigger symbols */
 }
