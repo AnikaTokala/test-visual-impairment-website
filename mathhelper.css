@@ -40,7 +40,8 @@ table {
 th, td {
     border: 1px solid #fbf3ea;
     padding: 6px 10px;    /* short rows, not tall */
-    font-size: 20px;      /* bigger text */
+    width: 50%;  
+    font-size: 24px;      /* bigger text */
 }
 
 /* Header cells */
