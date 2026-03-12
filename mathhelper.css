@@ -1,50 +1,51 @@
-body{
-    margin:0;
-    background-color:#1d1d4a;
-    font-family:"Times New Roman", serif;
+body {
+    margin: 0;
+    background-color: #1d1d4a;
+    font-family: "Times New Roman", serif;
 }
 
 /* Header */
-
-header{
-    background-color:#fbf3ea;
-    text-align:center;
-    padding:30px 0;
+header {
+    background-color: #fbf3ea;
+    text-align: center;
+    padding: 30px 0;
 }
 
-h1{
-    margin:0;
-    font-size:60px;
-    color:#1d1d4a;
+h1 {
+    margin: 0;
+    font-size: 60px;
+    color: #1d1d4a;
 }
 
 /* Main content area */
-
 main {
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;   /* stack tables vertically */
+    align-items: center;      /* center tables horizontally */
+    gap: 50px;                /* space between tables */
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 60%;               /* a bit wider than before */
+    color: #fbf3ea;
     text-align: center;
 }
 
-/* Table */
-
-table {
-    display: block; 
-    margin: 20px auto;    
-    border-collapse: collapse;
-    width: 50%;
-    color: #fbf3ea;
+/* Table cells */
+th, td {
+    border: 1px solid #fbf3ea;
+    padding: 14px 20px;
 }
 
-th, td{
-    border:1px solid #fbf3ea;
-    padding:12px;
-    text-align:center;
+/* Header cells */
+th {
+    background-color: #2a2a6b;
 }
 
-th{
-    background-color:#2a2a6b;
-}
-
-.symbol{
-    font-size:28px;
+/* Symbol styling */
+.symbol {
+    font-size: 28px;
 }
