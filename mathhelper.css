@@ -21,26 +21,24 @@ h1 {
 main {
     margin-top: 60px;
     display: flex;
-    flex-direction: column;   /* stack tables vertically */
-    align-items: center;      /* center tables horizontally */
-    gap: 50px;                /* space between tables */
+    flex-direction: column;  
+    align-items: center;      
+    gap: 50px;                
 }
 
 /* Table styling */
 table {
     border-collapse: collapse;
-    width: 60%;               /* a bit wider than before */
+    width: 60%;
     color: #fbf3ea;
     text-align: center;
 }
 
-/* Table cells */
 th, td {
     border: 1px solid #fbf3ea;
-    padding: 14px 20px;
+    padding: 30px 40px; 
 }
 
-/* Header cells */
 th {
     background-color: #2a2a6b;
 }
