@@ -29,18 +29,18 @@ main {
 
 table {
     border-collapse: collapse;
-    width: 40%;           /* smaller width */
-    max-width: 400px;     /* cap width */
+    width: 50%;           /* half the page width */
+    max-width: 600px;     /* optional cap */
     color: #fbf3ea;
     text-align: center;
-    margin: 20px auto;    /* 20px space from header/top and center horizontally */
+    margin: 20px auto;    /* centered horizontally with space from header */
 }
 
 /* Table cells */
 th, td {
     border: 1px solid #fbf3ea;
-    padding: 4px 8px;     /* very compact rows */
-    font-size: 14px;      /* smaller text */
+    padding: 6px 10px;    /* short rows, not tall */
+    font-size: 20px;      /* bigger text */
 }
 
 /* Header cells */
@@ -50,5 +50,5 @@ th {
 
 /* Symbols */
 .symbol {
-    font-size: 16px;      /* smaller symbols */
+    font-size: 24px;      /* bigger symbols */
 }
