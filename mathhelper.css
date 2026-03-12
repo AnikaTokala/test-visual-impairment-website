@@ -27,20 +27,21 @@ main {
     width: 100%;
 }
 
-/* Table styling */
+/* Table styling only */
 table {
     border-collapse: collapse;
-    width: 70%;               /* moderate width */
-    max-width: 1000px;        /* cap width */
+    width: 60%;           /* smaller table width */
+    max-width: 800px;     /* cap width */
     color: #fbf3ea;
     text-align: center;
+    margin: 0 auto;       /* center horizontally */
 }
 
 /* Table cells */
 th, td {
     border: 1px solid #fbf3ea;
-    padding: 20px 30px;       /* moderate row height */
-    font-size: 20px;          /* readable text size */
+    padding: 10px 15px;   /* compact row height and horizontal padding */
+    font-size: 18px;      /* smaller text */
 }
 
 /* Header cells */
@@ -50,5 +51,5 @@ th {
 
 /* Symbol styling */
 .symbol {
-    font-size: 28px;          /* nice size for symbols */
+    font-size: 22px;      /* smaller symbols */
 }
