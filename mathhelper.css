@@ -27,21 +27,20 @@ main {
     width: 100%;
 }
 
-/* Tables */
 table {
     border-collapse: collapse;
-    width: 50%;           /* smaller width */
-    max-width: 600px;     /* cap width */
+    width: 40%;           /* smaller width */
+    max-width: 400px;     /* cap width */
     color: #fbf3ea;
     text-align: center;
-    margin: 40px auto 0 auto; /* 40px margin from header, auto horizontal */
+    margin: 20px auto;    /* 20px space from header/top and center horizontally */
 }
 
 /* Table cells */
 th, td {
     border: 1px solid #fbf3ea;
-    padding: 6px 10px;    /* much smaller row height and horizontal padding */
-    font-size: 16px;      /* smaller text */
+    padding: 4px 8px;     /* very compact rows */
+    font-size: 14px;      /* smaller text */
 }
 
 /* Header cells */
@@ -51,5 +50,5 @@ th {
 
 /* Symbols */
 .symbol {
-    font-size: 18px;      /* smaller symbols */
+    font-size: 16px;      /* smaller symbols */
 }
