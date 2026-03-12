@@ -28,7 +28,8 @@ main {
 /* Table */
 
 table {
-    margin: 20px auto; 
+    display: block;     
+    margin: 20px auto;    
     border-collapse: collapse;
     width: 50%;
     color: #fbf3ea;
