@@ -42,6 +42,15 @@ th, td{
     text-align:center;
 }
 
+td{
+    cursor:pointer;
+    transition:background 0.2s;
+}
+
+td:hover{
+    background-color:#3a3a8a;
+}
+
 th{
     background-color:#2a2a6b;
 }
