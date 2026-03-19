@@ -112,6 +112,21 @@
 </div>
 
 </main>
+<script>
+function speakText(text) {
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.rate = 1;
+    speech.pitch = 1;
+    speech.volume = 1;
 
+    window.speechSynthesis.cancel(); // stop overlapping speech
+    window.speechSynthesis.speak(speech);
+}
+document.querySelectorAll("td").forEach(cell => {
+    cell.addEventListener("click", () => {
+        speakText(cell.innerText);
+    });
+});
+</script>
 </body>
 </html>
