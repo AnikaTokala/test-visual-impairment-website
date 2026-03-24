@@ -119,7 +119,7 @@ function speakText(text) {
     speech.pitch = 1;
     speech.volume = 1;
 
-    window.speechSynthesis.cancel(); // stop overlapping speech
+    window.speechSynthesis.cancel(); 
     window.speechSynthesis.speak(speech);
 }
 document.querySelectorAll("td").forEach(cell => {
