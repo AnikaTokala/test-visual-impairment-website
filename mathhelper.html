@@ -21,7 +21,7 @@
   </tr>
 
   <tr>
-    <td class="symbol">&plusmn;</td>
+    <td class="symbol plusminus">&plusmn;</td>
     <td>Plus Minus</td>
   </tr>
 
@@ -60,7 +60,7 @@
   </tr>
 
   <tr>
-    <td>∇ · E = ρ / ε₀</td>
+    <td class="electricgauss">∇ · E = ρ / ε₀</td>
     <td>Gauss's Law (Electric)</td>
   </tr>
 
@@ -113,6 +113,16 @@
 
 </main>
 <script>
+function speakElectricGauss() {
+    speakText("Del dot E equals rho over epsilon-nought");
+}
+    
+document.querySelectorAll(".electricgauss").forEach(cell => {
+    cell.addEventListener("click", () => {
+        speakElectricGauss();
+    });
+});
+    
 function speakText(text) {
     const speech = new SpeechSynthesisUtterance(text);
     speech.rate = 1;
