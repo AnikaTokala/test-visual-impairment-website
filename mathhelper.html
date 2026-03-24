@@ -125,19 +125,11 @@ function speakText(text) {
 }
 document.querySelectorAll("td").forEach(cell => {
     cell.addEventListener("click", () => {
-        if (!cell.classList.contains("electricgauss")) {
+        if (cell.classList.contains("electricgauss")) {
+            speakText("Del dot E equals rho over epsilon-nought");
+        } else {
             speakText(cell.innerText);
         }
-    });
-});
-
-function speakElectricGauss() {
-    speakText("Del dot E equals rho over epsilon-nought");
-}
-    
-document.querySelectorAll(".electricgauss").forEach(cell => {
-    cell.addEventListener("click", () => {
-        speakElectricGauss();
     });
 });
 </script>
