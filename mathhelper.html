@@ -127,9 +127,9 @@ document.querySelectorAll("td").forEach(cell => {
     cell.addEventListener("click", () => {
         if (cell.classList.contains("electricgauss")) {
             speakText("Del dot E equals rho over epsilon-nought");
-        if (cell.classList.contains("faraday")) {
+        else if (cell.classList.contains("faraday")) {
             speakText("The curl of E equals negative partial B partial t");
-        if (cell.classList.contains("ampere")) {
+        else if (cell.classList.contains("ampere")) {
             speakText("The curl of the magnetic field B is equal to mu-nought times J plus mu-nought epsilon-nought times the partial derivative of E with respect to t");
         } else {
             speakText(cell.innerText);
