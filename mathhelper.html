@@ -113,7 +113,6 @@
 
 </main>
 <script>
-    
 function speakText(text) {
     const speech = new SpeechSynthesisUtterance(text);
     speech.rate = 1;
@@ -123,14 +122,15 @@ function speakText(text) {
     window.speechSynthesis.cancel(); 
     window.speechSynthesis.speak(speech);
 }
+
 document.querySelectorAll("td").forEach(cell => {
     cell.addEventListener("click", () => {
         if (cell.classList.contains("electricgauss")) {
             speakText("Del dot E equals rho over epsilon-nought");
-        else if (cell.classList.contains("faraday")) {
-            speakText("The curl of E equals negative partial B partial t");
-        else if (cell.classList.contains("ampere")) {
-            speakText("The curl of the magnetic field B is equal to mu-nought times J plus mu-nought epsilon-nought times the partial derivative of E with respect to t");
+        } else if (cell.classList.contains("faraday")) {
+            speakText("The curl of E equals negative partial B over partial t");
+        } else if (cell.classList.contains("ampere")) {
+            speakText("The curl of B equals mu nought J plus mu nought epsilon nought partial E over partial t");
         } else {
             speakText(cell.innerText);
         }
