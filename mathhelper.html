@@ -80,7 +80,7 @@
   </tr>
 
   <tr>
-    <td>u · v = u₁v₁ + u₂v₂ + u₃v₃</td>
+    <td class="dotprod">u · v = u₁v₁ + u₂v₂ + u₃v₃</td>
     <td>Dot Product</td>
   </tr>
 
@@ -90,7 +90,7 @@
   </tr>
 
   <tr>
-    <td>∑<sub>k=m</sub><sup>n</sup> f(k)</td>
+    <td class="sumnot">∑<sub>k=m</sub><sup>n</sup> f(k)</td>
     <td>Summation Notation</td>
   </tr>
 
@@ -100,7 +100,7 @@
   </tr>
 
   <tr>
-    <td>a² + b² = c²</td>
+    <td class="pythagorean">a² + b² = c²</td>
     <td>Pythagorean Theorem</td>
   </tr>
 
@@ -131,6 +131,12 @@ document.querySelectorAll("td").forEach(cell => {
             speakText("The curl of E equals negative partial B over partial t");
         } else if (cell.classList.contains("ampere")) {
             speakText("The curl of B equals mu nought J plus mu nought epsilon nought partial E over partial t");
+        } else if (cell.classList.contains("dotprod")) {
+            speakText("u dot v equals u-one v-one plus u-two v-two plus u-three v-three");
+        } else if (cell.classList.contains("sumnot")) {
+            speakText("The sum of f of k from k equals m to n");
+        } else if (cell.classList.contains("pythagorean")) {
+            speakText("A squared plus b squared equals c squared");
         } else {
             speakText(cell.innerText);
         }
