@@ -70,12 +70,12 @@
   </tr>
 
   <tr>
-    <td>∇ × E = − ∂B / ∂t</td>
+    <td class="faraday">∇ × E = − ∂B / ∂t</td>
     <td>Faraday's Law of Induction</td>
   </tr>
 
   <tr>
-    <td>∇ × B = μ₀J + μ₀ε₀ ∂E / ∂t</td>
+    <td class="ampere">∇ × B = μ₀J + μ₀ε₀ ∂E / ∂t</td>
     <td>Ampère-Maxwell Law</td>
   </tr>
 
@@ -127,6 +127,10 @@ document.querySelectorAll("td").forEach(cell => {
     cell.addEventListener("click", () => {
         if (cell.classList.contains("electricgauss")) {
             speakText("Del dot E equals rho over epsilon-nought");
+        if (cell.classList.contains("faraday")) {
+            speakText("The curl of E equals negative partial B partial t");
+        if (cell.classList.contains("ampere")) {
+            speakText("The curl of the magnetic field B is equal to mu-nought times J plus mu-nought epsilon-nought times the partial derivative of E with respect to t");
         } else {
             speakText(cell.innerText);
         }
