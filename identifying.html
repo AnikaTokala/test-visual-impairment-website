@@ -10,31 +10,85 @@
 
 <div class="test-container">
     <h2>Color Blindness Test</h2>
-    <p>What number do you see?</p>
+    <p id="question-text">What number do you see?</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Ishihara_9.png" alt="Color test">
+    <img id="test-image" src="plate1.png" alt="Color test">
 
-    <div class="answers">
-        <button onclick="checkAnswer(12)">12</button>
-        <button onclick="checkAnswer(8)">8</button>
-        <button onclick="checkAnswer(3)">3</button>
-    </div>
+    <div class="answers" id="answers"></div>
 
     <p id="result"></p>
 </div>
 
 <script>
-function checkAnswer(answer) {
-    let result = document.getElementById("result");
+const questions = [
+    {
+        image: "plate1.png",
+        correct: 12,
+        options: [12, 8, 3]
+    },
+    {
+        image: "plate2.png",
+        correct: 8,
+        options: [6, 8, 29]
+    },
+    {
+        image: "plate3.png",
+        correct: 29,
+        options: [15, 29, 70]
+    }
+];
 
-    if (answer === 12) {
-        result.textContent = "Normal color vision!";
-        result.style.color = "green";
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion() {
+    const q = questions[currentQuestion];
+
+    document.getElementById("test-image").src = q.image;
+
+    const answersDiv = document.getElementById("answers");
+    answersDiv.innerHTML = "";
+
+    q.options.forEach(option => {
+        const btn = document.createElement("button");
+        btn.textContent = option;
+        btn.onclick = () => checkAnswer(option);
+        answersDiv.appendChild(btn);
+    });
+}
+
+function checkAnswer(answer) {
+    if (answer === questions[currentQuestion].correct) {
+        score++;
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    const result = document.getElementById("result");
+
+    if (score === questions.length) {
+        result.textContent = "Your color vision appears normal.";
+        result.style.color = "lightgreen";
+    } else if (score >= 1) {
+        result.textContent = "You may have mild color vision deficiency.";
+        result.style.color = "orange";
     } else {
         result.textContent = "You may have color vision deficiency.";
         result.style.color = "red";
     }
+
+    document.getElementById("answers").innerHTML = "";
 }
+
+loadQuestion();
 </script>
 
 </body>
