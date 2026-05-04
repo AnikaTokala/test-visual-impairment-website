@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Identifying</title>
-    <link href="./style.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Identifying</h1>
-</body>
-</html>
+<div class="test-container">
+    <h2>Color Blindness Test</h2>
+    <p>What number do you see?</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Ishihara_9.png" alt="Color test">
+
+    <div class="answers">
+        <button onclick="checkAnswer(12)">12</button>
+        <button onclick="checkAnswer(8)">8</button>
+        <button onclick="checkAnswer(3)">3</button>
+    </div>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function checkAnswer(answer) {
+    let result = document.getElementById("result");
+
+    if (answer === 12) {
+        result.textContent = "Normal color vision!";
+        result.style.color = "green";
+    } else {
+        result.textContent = "You may have color vision deficiency.";
+        result.style.color = "red";
+    }
+}
+</script>
