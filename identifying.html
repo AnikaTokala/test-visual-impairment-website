@@ -27,12 +27,12 @@ const questions = [
         options: [12, 8, 3]
     },
     {
-        image: "plate2.png",
+        image: "ishihara8.png",
         correct: 8,
         options: [6, 8, 29]
     },
     {
-        image: "plate3.png",
+        image: "ishihara29.png",
         correct: 29,
         options: [15, 29, 70]
     }
@@ -75,13 +75,13 @@ function showResult() {
     const result = document.getElementById("result");
 
     if (score === questions.length) {
-        result.textContent = "Your color vision appears normal.";
+        result.textContent = "Normal color vision.";
         result.style.color = "lightgreen";
     } else if (score >= 1) {
-        result.textContent = "You may have mild color vision deficiency.";
+        result.textContent = "Slight indication of abnormal color vision.";
         result.style.color = "orange";
     } else {
-        result.textContent = "You may have color vision deficiency.";
+        result.textContent = "Strong indication of abnormal color vision. Further assessment suggested.";
         result.style.color = "red";
     }
 
